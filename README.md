@@ -4,3 +4,5 @@
 Network Datasets are in the **real_graphs folder**.
 
 SIR labels for $t \in [0,...T]$ are extracted using Monte-Carlo simulations on the undirected/unweighted preprocessed graphs.
+
+![This is an image](./images/sir_predictions_karate.png)
