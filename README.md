@@ -1,9 +1,5 @@
-# Neural Ordinary Differential Equations for Modeling Epidemic Spreading 
-## Predicting SIR spreding on Large Complex Networks
+# Neural Ordinary Differential Equations for Modeling Epidemic Spreading (GN-ODE)
+## Predicting SIR model on Large Complex Networks
 
-rest libraries in requirements.txt with pip  
-
-to run a simple model for forecasting with:  
-1. 
-2. 
-3. 
+Network Datasets are in the **real_graphs folder**.
+SIR labels for $t \in [0,...T]$ are extracted using Monte-Carlo simulations on the undirected/unweighted preprocessed graphs.
