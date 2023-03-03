@@ -9,3 +9,10 @@ Network Datasets are in the ```real_graphs``` folder.
 
 SIR labels for $t \in [0,...T]$ are extracted using Monte-Carlo simulations on the undirected/unweighted preprocessed graphs.
 
+For single graph training: `python monitorer_sim.py`
+Inside the script you need to specify the following:
+- `datasets_array` can be equal to `['./real_graphs/epinions']` or based on the desired dataset path in folder `real_graphs`.
+- `model` can be equal to `dmp` (Dynamic Message Passing), `GCN`, `GIN` (GNN variants), `ode_nn` (the proposed GN-ODE).
+- the hyperparameters for training: `epochs`, `lr`, `batch_size`, and the `hidden_dim_array` (e.g. [64] for hidden_size 64).
+- the hyperparameters for Monte-carlo simulations and labels extraction: `beta`, `gamma` (infection and recovery rates), `deltaT` (step size of teh ODE solver), `maxTime` (number of spreading time steps), `sim` (number of Monte-carlo simulations).
+
