@@ -10,7 +10,7 @@ many_graph_instances = True
 epochs, lr, batch_size = 500, 1e-4, 1
 train_val_test_ratio = [6e-1, 2e-1, 2e-1]
 
-n_I = [10]
+n_I = [2]
 trials_per_number = 200
 
 beta, gamma = 0.2, 0.1
@@ -19,7 +19,7 @@ deltaT, maxTime, sim = 0.5, 20, int(10e3)
 #hidden_dim_array = [8]
 hidden_dim_array = [64]
 
-datasets_array = ['./real_graphs/epinions']
+datasets_array = ['./real_graphs/karate']
 model = 'dmp'
 out_of_dist = False
 

@@ -15,6 +15,7 @@ Inside the script you need to specify the following:
 - `model` can be equal to `dmp` (Dynamic Message Passing), `GCN`, `GIN` (GNN variants), `ode_nn` (the proposed GN-ODE).
 - the hyperparameters for training: `epochs`, `lr`, `batch_size`, and the `hidden_dim_array` (e.g. [64] for hidden_size 64).
 - the hyperparameters for Monte-carlo simulations and labels extraction: `beta`, `gamma` (infection and recovery rates), `deltaT` (step size of teh ODE solver), `maxTime` (number of spreading time steps), `sim` (number of Monte-Carlo simulations).
+- `out_of_dist` equal to `True` for within distribution values of parameters `beta`, `gamma` or equal to `False` for out of distribution experiments.
 
 For multiple graph training and inference on a bigger unseen graph: `python monitorer-ngraphs.py`  
 Inside the script you need to specify the following:
