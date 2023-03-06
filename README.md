@@ -9,7 +9,7 @@ Network Datasets are in the ```real_graphs``` folder.
 
 SIR labels for $t \in [0,...T]$ are extracted using Monte-Carlo simulations on the undirected/unweighted preprocessed graphs.
 
-For **single graph** training: `python monitorer-sim.py`  
+For **single graph training**: `python monitorer-sim.py`  
 Inside the script you need to specify the following:
 - `datasets_array` can be equal to `['./real_graphs/karate']` or based on the desired dataset path in folder `real_graphs`.
 - `model` can be equal to `'dmp'` (Dynamic Message Passing), `'GCN'`, `'GIN'` (GNN variants), `'ode_nn'` (the proposed GN-ODE).
@@ -22,7 +22,7 @@ The `ode_nn` script contains functions for **label extraction based on Monte-Car
 - By running `python monitorer-sim.py` without changes on the data parameters, those labels are used by default by the specified model, e.g. the proposed if `model = 'ode_nn'`.
 - For the rest of datasets, or different initial set of infected nodes and Monte-Carlo parameters, you automatically follow the label extraction process by running `python monitorer-sim.py` and then the specified model runs on the extracted data.
 
-For **multiple graph** training and **inference on a bigger unseen graph**: `python monitorer-ngraphs.py`  
+For **multiple graph training and inference on a bigger unseen graph**: `python monitorer-ngraphs.py`  
 Inside the script you need to specify the following:
 - `datasets_array` can be equal to `['./real_graphs/dolphins+fb-food+fb-social+openflights+wiki-vote+epinions']` for training on dolphins, fb-food, fb-social, openflights, wiki-vote and predictions on epinions.
 - rest parameters can be selected as descrived above for `python monitorer-sim.py`.
