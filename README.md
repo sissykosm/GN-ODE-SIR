@@ -17,9 +17,10 @@ Inside the script you need to specify the following:
 - the hyperparameters for Monte-carlo simulations and labels extraction: `beta`, `gamma` (infection and recovery rates), `deltaT` (step size of teh ODE solver), `maxTime` (number of spreading time steps), `sim` (number of Monte-Carlo simulations).
 - `out_of_dist` equal to `True` for within distribution values of parameters `beta`, `gamma` or equal to `False` for out of distribution experiments. Also, `trials_per_number` is the number of samples to extract from each graph. For the number of initial set of infected nodes that are randomly sampled set a value in the list `n_I` (e.g. [2] for 2 initial infected nodes).
 
+The `ode_nn` script contains fucntions for label extraction based on Monte-Carlo simulations using networkx `def sir_nx`, pandas `def sir_pandas` and torch vectors `def sir_torch` (that runs faster using gpu).
+- In the folder `multi-graph-1` we give example labels for karate graph, initial set of infected nodes equal to 2 and `beta`, `gamma` sampled randomly as shown in script `python monitorer-sim.py`.
+
 For multiple graph training and inference on a bigger unseen graph: `python monitorer-ngraphs.py`  
 Inside the script you need to specify the following:
 - `datasets_array` can be equal to `['./real_graphs/dolphins+fb-food+fb-social+openflights+wiki-vote+epinions']` for training on dolphins, fb-food, fb-social, openflights, wiki-vote and predictions on epinions.
 - rest parameters can be selected as descrived above for `python monitorer-sim.py`.
-
-`ode_nn` script contains fucntions for label extraction based on Monte-Carlo simulations using networkx `def sir_nx`, pandas `def sir_pandas` and torch vectors `def sir_torch` (that runs faster using gpu).
