@@ -20,6 +20,7 @@ Inside the script you need to specify the following:
 The `ode_nn` script contains fucntions for label extraction based on Monte-Carlo simulations using networkx `def sir_nx`, pandas `def sir_pandas` and torch vectors `def sir_torch` (that runs faster using gpu).
 - In the folder `multi-graph-1` we give some example labels for the karate network, with random initial set of infected nodes equal to 2 and `beta`, `gamma` sampled randomly as shown in script `python monitorer-sim.py`.
 - By running `python monitorer-sim.py` without changes on the data parameters, those labels are used by default by the specified model, e.g. the proposed if `model = 'ode_nn'`.
+- For the rest of datasets, or different initial set of infected nodes, you automatically follow the label extraction process by running `python monitorer-sim.py` and after the specified model runs on the extracted data.
 
 For multiple graph training and inference on a bigger unseen graph: `python monitorer-ngraphs.py`  
 Inside the script you need to specify the following:
