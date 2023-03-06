@@ -20,7 +20,7 @@ deltaT, maxTime, sim = 0.5, 20, int(10e3)
 hidden_dim_array = [64]
 
 datasets_array = ['./real_graphs/karate']
-model = 'dmp'
+model = 'ode_nn'
 out_of_dist = False
 
 if not many_graph_instances:
